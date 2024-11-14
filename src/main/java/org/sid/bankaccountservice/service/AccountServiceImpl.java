@@ -29,7 +29,7 @@ public class AccountServiceImpl implements AccountService {
                 .currency(bankAccountDTO.getCurrency())
                 .build();
         BankAccount saveBankAccount = bankAccountRepository.save(bankAccount);
-        BankAccountResponseDTO bankAccountResponseDTO = accountMapper.fromBankAccount(saveBankAccount);
+        accountMapper.fromBankAccount(saveBankAccount)
         return bankAccountResponseDTO;
     }
 }
